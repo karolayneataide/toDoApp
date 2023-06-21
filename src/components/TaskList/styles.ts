@@ -12,22 +12,32 @@ export const styles = StyleSheet.create({
   },
   create: {
     color: colors.Utils[300],
+    fontWeight: "700",
+    fontSize: 14,
+    padding: 4,
   },
   number: {
     color: colors.Gray[200],
+    backgroundColor: colors.Gray[400],
   },
   numberBox: {
     backgroundColor: colors.Gray[400],
-    borderRadius: 50,
-    // borderWidth: 12,
-    // padding: 16,
+    borderRadius: 15,
+    fontSize: 14,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    borderColor: colors.Gray[400],
+    borderWidth: 1,
   },
   done: {
+    fontWeight: "700",
     color: colors.Utils[100],
+    fontSize: 14,
+    padding: 4,
   },
   box: {
     display: "flex",
     flexDirection: "row",
-    gap: 16,
+    gap: 8,
   },
 });

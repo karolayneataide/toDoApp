@@ -15,7 +15,7 @@ export function Tasklist({ tasks }: TasksProps) {
           <View>
             <Text style={styles.create}>Criadas </Text>
           </View>
-          <View>
+          <View style={styles.numberBox}>
             <Text style={styles.number}>{taskCreated}</Text>
           </View>
         </View>
