@@ -11,3 +11,8 @@ export interface TasksProps {
 export interface TaskProps {
   task: TaskItems;
 }
+
+export interface FunctionProps {
+  handleChecked: (taskId: string) => void;
+  handleDelete: (taskId: string) => void;
+}

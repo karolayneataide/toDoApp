@@ -1,10 +1,14 @@
 import { ScrollView, Text, View } from "react-native";
-import { TasksProps } from "../../screens/Home/Home.props";
+import { FunctionProps, TasksProps } from "../../screens/Home/Home.props";
 import { EmptyList } from "../EmptyList ";
 import { FullList } from "../FullList";
 import { styles } from "./styles";
 
-export function Tasklist({ tasks }: TasksProps) {
+export function Tasklist({
+  tasks,
+  handleDelete,
+  handleChecked,
+}: TasksProps & FunctionProps) {
   const taskCreated = tasks.length;
   const tasksChecked = tasks.filter((task) => task.checked).length;
 
@@ -32,7 +36,12 @@ export function Tasklist({ tasks }: TasksProps) {
         ) : (
           <ScrollView>
             {tasks.map((task) => (
-              <FullList key={task.id} task={task} />
+              <FullList
+                key={task.id}
+                task={task}
+                handleDelete={handleDelete}
+                handleChecked={handleChecked}
+              />
             ))}
           </ScrollView>
         )}

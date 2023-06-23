@@ -6,19 +6,21 @@ export const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     marginTop: 30,
-    padding: 24,
+    padding: 22,
     display: "flex",
     justifyContent: "space-between",
   },
   create: {
     color: colors.Utils[300],
     fontWeight: "700",
-    fontSize: 14,
+    fontSize: 16,
+    lineHeight: 16,
     padding: 4,
   },
   number: {
     color: colors.Gray[200],
     backgroundColor: colors.Gray[400],
+    fontWeight: "700",
   },
   numberBox: {
     backgroundColor: colors.Gray[400],
@@ -32,12 +34,13 @@ export const styles = StyleSheet.create({
   done: {
     fontWeight: "700",
     color: colors.Utils[100],
-    fontSize: 14,
+    fontSize: 16,
+    lineHeight: 16,
     padding: 4,
   },
   box: {
     display: "flex",
     flexDirection: "row",
-    gap: 8,
+    gap: 4,
   },
 });

@@ -29,6 +29,27 @@ export default function Home() {
     ]);
   }
 
+  function handleDelete(taskId: string) {
+    const tasksWithoutTaskID = tasks.filter((task) => {
+      return task.id != taskId;
+    });
+
+    setTasks(tasksWithoutTaskID);
+  }
+
+  function handleChecked(taskID: string) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskID) {
+        return {
+          ...task,
+          checked: !task.checked,
+        };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Header />
@@ -46,7 +67,11 @@ export default function Home() {
           </View>
         </TouchableOpacity>
       </View>
-      <Tasklist tasks={tasks} />
+      <Tasklist
+        tasks={tasks}
+        handleDelete={handleDelete}
+        handleChecked={handleChecked}
+      />
     </SafeAreaView>
   );
 }

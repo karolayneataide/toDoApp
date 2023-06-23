@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native";
-import colors from "../../styles/colors";
 import { Colors } from "../../styles";
+import colors from "../../styles/colors";
 
 export const styles = StyleSheet.create({
   wrapper: {
     height: 208,
     width: 327,
     borderTopWidth: 1,
-    marginTop: 98,
+
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",

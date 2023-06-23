@@ -3,9 +3,12 @@ import colors from "../../styles/colors";
 
 export const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    margin: 25,
     flexDirection: "row",
     marginBottom: 10,
+    justifyContent: "center",
+    backgroundColor: colors.Gray[500],
+    borderRadius: 6,
   },
   name: {
     flex: 1,
@@ -23,9 +26,18 @@ export const styles = StyleSheet.create({
   button: {
     width: 56,
     height: 56,
-    borderRadius: 5,
-    backgroundColor: colors.Utils[200],
-    alignItems: "center",
+    alignItems: "flex-end",
     justifyContent: "center",
+  },
+  check: {
+    width: 35,
+    height: 35,
+    alignContent: "center",
+    justifyContent: "center",
+    borderRadius: 25,
+    borderColor: colors.Utils[300],
+    borderWidth: 2,
+    paddingVertical: 1,
+    paddingHorizontal: 6,
   },
 });
