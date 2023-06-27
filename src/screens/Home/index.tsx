@@ -55,6 +55,7 @@ export default function Home() {
       <Header />
       <View style={styles.newContainer}>
         <TextInput
+          maxLength={40}
           value={task}
           placeholder="Adicione uma nova tarefa"
           placeholderTextColor={colors.Gray[300]}

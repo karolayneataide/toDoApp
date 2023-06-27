@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   },
   addTaskInput: {
     height: 56,
-    width: 271,
+    width: 276,
     padding: 16,
     marginRight: 8,
     backgroundColor: colors.Gray[500],
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#FFF",
+    color: colors.Gray[100],
     borderRadius: 100,
     fontSize: 16,
     alignItems: "center",

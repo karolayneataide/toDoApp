@@ -1,6 +1,7 @@
+import Checkbox from "expo-checkbox";
 import { Image, TextInput, TouchableOpacity, View } from "react-native";
-import { Checkbox } from "react-native-paper";
 import { FunctionProps, TaskProps } from "../../screens/Home/Home.props";
+import { Colors } from "../../styles";
 import { styles } from "./styles";
 
 export function FullList({
@@ -10,12 +11,12 @@ export function FullList({
 }: TaskProps & FunctionProps) {
   return (
     <View style={styles.container}>
-      <View style={styles.check}>
-        <Checkbox
-          status={task.checked ? "checked" : "unchecked"}
-          onPress={() => handleChecked(task.id)}
-        />
-      </View>
+      <Checkbox
+        color={task.checked ? Colors.Utils[100] : Colors.Utils[300]}
+        style={[styles.check]}
+        value={task.checked}
+        onValueChange={() => handleChecked(task.id)}
+      />
       <View>
         <TextInput style={styles.name} value={task.text} editable={false} />
       </View>
