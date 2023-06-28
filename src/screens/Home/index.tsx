@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alert,
   SafeAreaView,
   Text,
   TextInput,
@@ -18,15 +19,19 @@ export default function Home() {
   const [tasks, setTasks] = React.useState<TaskItems[]>([]);
 
   function handleTaskAdd() {
-    setTask("");
-    setTasks([
-      ...tasks,
-      {
-        id: v4(),
-        text: task,
-        checked: false,
-      },
-    ]);
+    if (!task) {
+      Alert.alert("Nenhuma tarefa adicionada!");
+    } else {
+      setTask("");
+      setTasks([
+        ...tasks,
+        {
+          id: v4(),
+          text: task,
+          checked: false,
+        },
+      ]);
+    }
   }
 
   function handleDelete(taskId: string) {
