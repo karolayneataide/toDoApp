@@ -1,4 +1,4 @@
-import { ScrollView, Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import { FunctionProps, TasksProps } from "../../screens/Home/Home.props";
 import { EmptyList } from "../EmptyList ";
 import { FullList } from "../FullList";
@@ -34,16 +34,18 @@ export function Tasklist({
         {tasks.length === 0 ? (
           <EmptyList />
         ) : (
-          <ScrollView>
-            {tasks.map((task) => (
+          <FlatList
+            data={tasks}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
               <FullList
-                key={task.id}
-                task={task}
+                task={item}
                 handleDelete={handleDelete}
                 handleChecked={handleChecked}
               />
-            ))}
-          </ScrollView>
+            )}
+            showsVerticalScrollIndicator={false}
+          />
         )}
       </View>
     </View>
