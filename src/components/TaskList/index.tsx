@@ -31,22 +31,20 @@ export function Tasklist({
         </View>
       </View>
       <View>
-        {tasks.length === 0 ? (
-          <EmptyList />
-        ) : (
-          <FlatList
-            data={tasks}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <FullList
-                task={item}
-                handleDelete={handleDelete}
-                handleChecked={handleChecked}
-              />
-            )}
-            showsVerticalScrollIndicator={false}
-          />
-        )}
+        <FlatList
+          data={tasks}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <FullList
+              task={item}
+              handleDelete={handleDelete}
+              handleChecked={handleChecked}
+            />
+          )}
+          ListEmptyComponent={() => <EmptyList />}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[{ paddingBottom: 100 }]}
+        />
       </View>
     </View>
   );
