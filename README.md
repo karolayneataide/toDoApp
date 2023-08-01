@@ -17,9 +17,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 📋 Clipboard (Pré-requisitos)
 
+```
 yarn install
 npx expo start
 ```
 
 Isso iniciará o projeto em seu terminal. Para executar o projeto em um dispositivo móvel, é necessário baixar o aplicativo Expo Go e seguir as instruções do ambiente de desenvolvimento utilizado.
-```
+
